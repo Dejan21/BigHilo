@@ -1,0 +1,33 @@
+.game{
+  width: auto;
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: #d1d1d1;
+ height: 700px;
+ flex-wrap: nowrap; 
+ flex-direction: column;
+}
+.middle{
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.top, .bottom {
+    height: 200px;
+    background: greenyellow;
+}
+.middleLeft, .middleRight{
+    width: 450px ;
+}
+.middleCenter{
+    width: 450px;
+    justify-content: center;
+}
+
+
+
+
