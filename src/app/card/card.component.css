@@ -1,0 +1,17 @@
+.card{
+    background: white;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 80px;
+}
+.red{
+    color: red;
+}
+.black{
+    color: black;
+}

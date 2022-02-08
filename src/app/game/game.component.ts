@@ -8,9 +8,15 @@ import { GameService } from '../game.service';
 })
 export class GameComponent implements OnInit {
 
-  constructor( private gameService: GameService) { }
+  constructor( public gameService: GameService) { }
 
   ngOnInit(): void {
+    this.gameLoop();
+    setInterval(this.gameLoop.bind(this), 10000)
+  }
+
+  gameLoop(){
+    this.gameService.gameLoop();
   }
 
 }

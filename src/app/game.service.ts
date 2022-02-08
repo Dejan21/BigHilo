@@ -4,10 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GameService {
- 
+  
   
   cards: any = [];
   betTypes: any = [];
+  result = [];
+
+  round = {
+    id: 0,
+    result: false, // Result of the round will be card object
+    status: 0 //1 is finished, 0 is progress
+  }
+
   constructor() { 
 
    
@@ -118,7 +126,21 @@ this.betTypes.push({
     calcMultiplier(n: number, d: number) {
       return Math.floor((d - 1) / n);
     }
-  
+
+   gameLoop(){
+     const result = this.cards(Math.random() * this.cards.lenght) // select random value from the aray
+
+     this.round = {
+      id: this.round.id + 1,
+      result,
+      status: 0
+    }
+
+    setTimeout(() => {
+      this.round.status = 1;
+    }, 2000)
+
+   }
 
 };
 
