@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GameService {
-
+ 
+  
   cards: any = [];
   betTypes: any = [];
   constructor() { 
@@ -13,30 +14,30 @@ export class GameService {
 
   const numbers = ['2','3', '4', '5', '6', '7', '8', '9', '10', 'J', 'K', 'Q', 'A'];
   const symbols = 
-[
-{ symbol: '♠',
+  [
+  { symbol: '♠',
   color: 'black',
   key: 'spade',
   letter: 'S'
-},
-{
+  },
+  {
   symbol: '♥',
   color: 'red',
   key: 'heart',
   letter: 'H'
-},
-{
+  },
+  {
   symbol: '♦',
   color: 'red',
   key: 'diamonds',
   letter: 'D'
-},
-{
+  },
+  {
   symbol: '♣',
   color: 'black',
   key: 'clubs',
   letter: 'C'
-}
+  }
 ];
 
 for(let j = 0; j < symbols.length; j++ ) {
@@ -59,21 +60,68 @@ this.cards.push({
 this.betTypes.push({
   name: 'Hi Lo',
   key: 'HILO',
+  multiplier: this.calcMultiplier(1,13),
+  option:[]
 });
 
 this.betTypes.push({
-  name: 'Main',
-  key: 'MAIN',
+  name: 'Bet On Card',
+  key: 'BETONCARD',
+  multiplier: this.calcMultiplier(1,27),
   options: []
 });
 
 this.betTypes.push({
-  name: 'More',
-  key: 'MORE',
+  name: 'Bet On Number',
+  key: 'BETONNUMBER',
+  multiplier: this.calcMultiplier(1, 13),
   options: []
 });
 
-console.log(this.cards);
+this.betTypes.push({
+  name: 'Bet On Color',
+  key: 'BETONCOLOR',
+  multiplier: this.calcMultiplier(1, 13),
+  options: []
+});
 
-  }
-}
+this.betTypes.push({
+  name: 'Bet On Integer',
+  key: 'BETONINTEGER',
+  multiplier: this.calcMultiplier(16, 27),
+  options: []
+});
+
+this.betTypes.push({
+  name: 'Bet On Royals',
+  key: 'BETONROYALS',
+  multiplier: this.calcMultiplier(8, 27),
+  options: []
+});
+
+this.betTypes.push({
+  name: 'Bet On J or Q',
+  key: 'BETONINTEGER',
+  multiplier: this.calcMultiplier(4, 27),
+  options: []
+});
+
+this.betTypes.push({
+  name: 'Bet On K or A',
+  key: 'BETONINTEGER  ',
+  multiplier: this.calcMultiplier(4, 27),
+  options: []
+});
+   console.log(this.betTypes)
+    }
+
+    calcMultiplier(n: number, d: number) {
+      return Math.floor((d - 1) / n);
+    }
+  
+
+};
+
+
+
+
