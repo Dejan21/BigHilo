@@ -8,7 +8,7 @@ export class GameService {
   
   cards: any = [];
   betTypes: any = [];
-  result = [];
+  results = [];
 
    round = {
     id: 0,
@@ -19,7 +19,7 @@ export class GameService {
   constructor() { 
 
    
-
+ const cards = [];
   const numbers = ['2','3', '4', '5', '6', '7', '8', '9', '10', 'J', 'K', 'Q', 'A'];
   const symbols = 
   [
@@ -130,15 +130,14 @@ this.betTypes.push({
     }
 
    gameLoop(){
-     const result = this.cards[Math.random() * this.cards.length] // select random value from the aray
+     const result = this.cards[Math.floor(Math.random() * this.cards.length)] // select random value from the aray
 
      this.round = {
       id: this.round.id + 1,
       result,
       status: 0
-
       
-    }
+    };
 
     setTimeout(() => {
       this.round.status = 1;
