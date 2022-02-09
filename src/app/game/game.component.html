@@ -7,8 +7,8 @@
             LEFT
         </div>
         <div class="middleCenter">
-            <span *ngIf="!gameService.round.status">Waiting result</span>
-            <app-card [card]="gameService.round.result"></app-card>
+            <span *ngIf="!gameService.round.status">WAITING RESULT</span>
+            <app-card *ngIf="gameService.round.status" [card]="!gameService.round.result" ></app-card>
         </div>
         <div class="middleRight">
             RIGHT

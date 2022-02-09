@@ -7,7 +7,8 @@
     justify-content: center;
     border: 2px solid #ccc;
     border-radius: 20px;
-    font-size: 80px;
+    align-items: center;
+  
 }
 .red{
     color: red;

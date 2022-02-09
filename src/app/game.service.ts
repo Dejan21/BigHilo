@@ -10,7 +10,7 @@ export class GameService {
   betTypes: any = [];
   result = [];
 
-  round = {
+   round = {
     id: 0,
     result: false, // Result of the round will be card object
     status: 0 //1 is finished, 0 is progress
@@ -57,7 +57,7 @@ for(let j = 0; j < symbols.length; j++ ) {
       key: symbols[j].letter + numbers[i]
     })
   }
-};
+}
 
 this.cards.push({
   nubmer: 'JOKER',
@@ -120,20 +120,24 @@ this.betTypes.push({
   multiplier: this.calcMultiplier(4, 27),
   options: []
 });
+
    console.log(this.betTypes)
-    }
+
+ }
 
     calcMultiplier(n: number, d: number) {
       return Math.floor((d - 1) / n);
     }
 
    gameLoop(){
-     const result = this.cards(Math.random() * this.cards.lenght) // select random value from the aray
+     const result = this.cards[Math.random() * this.cards.length] // select random value from the aray
 
      this.round = {
       id: this.round.id + 1,
       result,
       status: 0
+
+      
     }
 
     setTimeout(() => {
