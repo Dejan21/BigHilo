@@ -8,7 +8,7 @@ export class GameService {
   
   cards: any = [];
   betTypes: any = [];
-  results = [];
+  results: any = [];
 
    round = {
     id: 0,
@@ -131,7 +131,8 @@ this.betTypes.push({
 
    gameLoop(){
      const result = this.cards[Math.floor(Math.random() * this.cards.length)] // select random value from the aray
-
+      this.results.push(result)
+      console.log(this.results);
      this.round = {
       id: this.round.id + 1,
       result,
