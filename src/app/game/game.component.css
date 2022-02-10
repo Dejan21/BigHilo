@@ -32,6 +32,19 @@
     display: flex; 
 }
 
+.top {
+    display: flex;
+  }
+  
+   .card {
+    width: 50px;
+    height: 20px;
+  }
+  
+  .top  app-card ::ng-deep .card {
+    width: 60px;
+  height: 110px;
+  }
 
 
 

@@ -12,7 +12,7 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.gameLoop();
-    setInterval(this.gameLoop.bind(this), 6000)
+    setInterval(this.gameLoop.bind(this), 10000)
   }
 
   gameLoop(){
