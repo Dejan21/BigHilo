@@ -7,6 +7,7 @@ import { GameService } from '../game.service';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
+  activeTab = 1;
 
   constructor( public gameService: GameService) { }
 
@@ -15,8 +16,12 @@ export class GameComponent implements OnInit {
     setInterval(this.gameLoop.bind(this), 10000)
   }
 
+
   gameLoop(){
     this.gameService.gameLoop();
   }
 
+  changeActiveTab(id: number){
+    this.activeTab = id;
+  }
 }

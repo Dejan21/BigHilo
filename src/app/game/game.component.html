@@ -1,14 +1,24 @@
 <div class="game">
     <div class="top">
-
+ 
      <div *ngFor="let result of gameService.results">
-         <app-card [card]="result"></app-card>
+        <app-card [card]="result" ></app-card>
      </div>
 
     </div>
     <div class="middle">
         <div class="middleLeft">
             LEFT
+            <div class="tabset">
+                <div class="tab" [class.active]="activeTab === 1"  (click)="changeActiveTab(1)">
+                  <div class="tab-title">Main</div>
+                  <div class="tab-content"  >Main Content</div>
+                </div>
+                <div class="tab" [class.active]="activeTab === 2" (click)="changeActiveTab(2)">
+                  <div class="tab-title">More</div>
+                  <div class="tab-content"  >More Content</div>
+                </div>
+              </div>
         </div>
         <div class="middleCenter">
             <span  *ngIf="!gameService.round.status">Waiting result</span>
