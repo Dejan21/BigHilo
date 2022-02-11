@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
   
+  value: any;
   betType: any;
   results:any = [];
   cards: any = [];
@@ -17,11 +18,13 @@ export class GameService {
     status: 0 //1 is finished, 0 is progress
   }
  
+ 
   
 
   constructor() { 
 
-   
+  // const buttons = ['2','3', '4', '5', '6', '7', '8', '9', '10', 'J', 'K', 'Q', 'A'];
+    
   const numbers = ['2','3', '4', '5', '6', '7', '8', '9', '10', 'J', 'K', 'Q', 'A'];
   const symbols = 
   [
@@ -138,6 +141,7 @@ this.betTypes.push({
      const result = this.cards[Math.floor(Math.random() * this.cards.length)] // select random value from the aray
      
      this.results.push(result);
+    
      
      console.log(this.betTypes)
      
@@ -158,9 +162,15 @@ this.betTypes.push({
   
    }
    
+   
+
+   sendData(value: any) {
+     this.value = value;
+   }
  
   
 };
+
 
 
 

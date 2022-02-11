@@ -8,7 +8,6 @@
     </div>
     <div class="middle">
         <div class="middleLeft">
-            LEFT
             <div class="tabset">
                 <div class="tab" [class.active]="activeTab === 1"  (click)="changeActiveTab(1)">
                   <div class="tab-title">Main</div>
@@ -16,10 +15,16 @@
                 </div>
                 <div class="tab" [class.active]="activeTab === 2" (click)="changeActiveTab(2)">
                   <div class="tab-title">More</div>
-                  <div class="tab-content"  >More Content</div>
+                  <div class="tab-content"  >
+                    <button>A</button>
+                  </div>
                 </div>
               </div>
-        </div>
+
+              <div *ngFor="let number of gameService.number">
+                <app-more-button [more]='number'></app-more-button>
+              </div>
+            </div>
         <div class="middleCenter">
             <span  *ngIf="!gameService.round.status">Waiting result</span>
             <app-card *ngIf="gameService.round.status" [card]="gameService.round.result" ></app-card>
