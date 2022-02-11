@@ -9,6 +9,8 @@ import { GameService } from '../game.service';
 export class GameComponent implements OnInit {
   activeTab = 1;
   morebutton:any;
+  half:any
+  min:any;
 
 
   constructor( public gameService: GameService) { }

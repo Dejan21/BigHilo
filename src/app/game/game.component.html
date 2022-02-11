@@ -31,10 +31,31 @@
             <app-card *ngIf="gameService.round.status" [card]="gameService.round.result" ></app-card>
         </div>
         <div class="middleRight">
-            RIGHT
+            <table>
+                <tr>
+                    <button (click)="half()"> 1/2 </button>
+                    <button (click)="half()"> 1/2 </button>
+                </tr>
+            </table>
         </div>
     </div>
     <div class="bottom">
-        BOTTOM
+        <table>
+            <tr>
+                <button (click)="half()"> 1/2 </button>
+                <button (click)="min()"> min</button>
+                <button (click)="min()"> min</button>
+                <button (click)="min()"> min</button>
+                <button (click)="min()"> min</button>
+                <button (click)="min()"> min</button>
+            </tr>
+            <button (click)="half()"> 1/2 </button>
+        <button (click)="min()"> min</button>
+        <button (click)="min()"> min</button>
+        <button (click)="min()"> min</button>
+        <button (click)="min()"> min</button>
+        <button (click)="min()"> min</button>
+        </table>
+      
     </div>
 </div>
