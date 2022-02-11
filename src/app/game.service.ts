@@ -11,6 +11,7 @@ export class GameService {
   cards: any = [];
   betTypes: any = [];
   number: any;
+numbers:any = []
 
    round = {
     id: 0,
@@ -23,9 +24,26 @@ export class GameService {
 
   constructor() { 
 
-  // const buttons = ['2','3', '4', '5', '6', '7', '8', '9', '10', 'J', 'K', 'Q', 'A'];
-    
   const numbers = ['2','3', '4', '5', '6', '7', '8', '9', '10', 'J', 'K', 'Q', 'A'];
+    
+  this.numbers = [
+    {value: '2',  multiplier: 2, },
+    {value: '3',  multiplier: 3, },
+    {value: '4',  multiplier: 4, },
+    {value: '5',  multiplier: 5, },
+    {value: '6',  multiplier: 6, },
+    {value: '7',  multiplier: 7, },
+    {value: '8',  multiplier: 8, },
+    {value: '9',  multiplier: 9, },
+    {value: '10',  multiplier: 10, },
+    {value: 'J',   },
+    {value: 'K',   },
+    {value: 'Q',   },
+    {value: 'A',   },
+    ];
+
+
+  
   const symbols = 
   [
   { symbol: '♠',

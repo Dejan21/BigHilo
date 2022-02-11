@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { GameService } from '../game.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { GameService } from '../game.service';
 })
 export class GameComponent implements OnInit {
   activeTab = 1;
+  morebutton:any;
+
 
   constructor( public gameService: GameService) { }
 
@@ -23,5 +25,9 @@ export class GameComponent implements OnInit {
 
   changeActiveTab(id: number){
     this.activeTab = id;
+  }
+
+  onClickButton(number:any) {
+    console.log(number)
   }
 }

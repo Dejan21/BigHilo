@@ -48,6 +48,7 @@
   }
   .tab-content{
     display:none;
+    flex-direction: column;
     }
     
     .active .tab-content{

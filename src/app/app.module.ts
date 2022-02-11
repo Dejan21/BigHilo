@@ -7,7 +7,7 @@ import { GameComponent } from './game/game.component';
 import { CardComponent } from './card/card.component';
 import { BetAreaComponent } from './bet-area/bet-area.component';
 import { ResultComponent } from './result/result.component';
-import { MoreButtonComponent } from './more-button/more-button.component';
+import { MorebuttonComponent } from './morebutton/morebutton.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { MoreButtonComponent } from './more-button/more-button.component';
     CardComponent,
     BetAreaComponent,
     ResultComponent,
-    MoreButtonComponent
+    MorebuttonComponent
   ],
   imports: [
     BrowserModule,

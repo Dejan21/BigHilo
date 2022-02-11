@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BetAreaComponent implements OnInit {
 
-  @Input() bet:any;
+
   constructor() { }
 
   ngOnInit(): void {
