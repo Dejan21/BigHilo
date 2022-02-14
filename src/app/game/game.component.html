@@ -27,8 +27,8 @@
                   <div class="tab-title">More</div>
                   <div class="tab-content">
                   <table>
-                    <th>  
-                        <tr *ngFor="let button of gameService.numbers" class="red">
+                    <th class="red">  
+                        <tr *ngFor="let button of gameService.numbers" >
                             <app-morebutton (clickEvent)="onClickButton(button)">{{button.value}}</app-morebutton>
                         </tr>
                    </th>
@@ -62,14 +62,14 @@
         <div class="middleRight">
                 <table class="right">
                     <tr>
-                        <button (click)="high()"> High </button>
-                        <button (click)="low()"> Low </button>
+                        <button (click)="high()" class="High"> High </button>
+                        <button (click)="low()" class="Low"> Low </button>
                     </tr>
                 </table>
         </div>
     </div>
     <div class="bottom">
-        <table>
+        <table class="bottom1">
             <tr>
                 <button (click)="half()"> 1/2 </button>
                 <button (click)="min()"> min</button>

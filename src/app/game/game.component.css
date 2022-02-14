@@ -78,5 +78,19 @@
      .active .tab-title{
      border-color: red;
      }
- 
+
+   .Low{
+     margin: top 50px;
+     height: 190px;
+     width: 130px;
+     background-color: red;
+     color: white;
+   }
+   .High{
+    margin:  5px;
+    height: 190px;
+    width: 130px;
+    background-color: blue;
+    color: white;
+  }
      
