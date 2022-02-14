@@ -13,11 +13,15 @@ export class GameService {
   number: any;
 numbers:any = []
 
+
+
+
    round = {
     id: 0,
     result: false, // Result of the round will be card object
     status: 0 //1 is finished, 0 is progress
   }
+
  
  
   
@@ -41,7 +45,8 @@ numbers:any = []
     {value: 'Q',   },
     {value: 'A',   },
     ];
-
+   
+   
 
   
   const symbols = 

@@ -11,32 +11,61 @@
             <div class="tabset">
                 <div class="tab" [class.active]="activeTab === 1"  (click)="changeActiveTab(1)">
                   <div class="tab-title">Main</div>
-                  <div class="tab-content"  >Main Content</div>
+                  <div class="tab-content"  >Main Content
+                      
+                    <button (click)="half()"> 1/2 </button>
+                    <button (click)="half()"> 1/2 </button>
+                    <button (click)="half()"> 1/2 </button>
+                    <button (click)="half()"> 1/2 </button>
+                    <button (click)="half()"> 1/2 </button>
+                    <button (click)="half()"> 1/2 </button>
+                    <button (click)="half()"> 1/2 </button>
+                
+                  </div>
                 </div>
                 <div class="tab" [class.active]="activeTab === 2" (click)="changeActiveTab(2)">
                   <div class="tab-title">More</div>
-                  <div class="tab-content"  >
-                    <div *ngFor="let button of gameService.numbers">
-                        <app-morebutton (clickEvent)="onClickButton(button)">{{button.value}}</app-morebutton>
-                       </div>
-                      
+                  <div class="tab-content">
+                  <table>
+                    <th>  
+                        <tr *ngFor="let button of gameService.numbers" class="red">
+                            <app-morebutton (clickEvent)="onClickButton(button)">{{button.value}}</app-morebutton>
+                        </tr>
+                   </th>
+ 
+                   <th>
+                        <tr *ngFor="let button of gameService.numbers" class="black">
+                            <app-morebutton (clickEvent)="onClickButton(button)">{{button.value}}</app-morebutton>
+                        </tr>
+                    </th>
+                    <th>
+                        <tr *ngFor="let button of gameService.numbers" class="grey">
+                            <app-morebutton (clickEvent)="onClickButton(button)">{{button.value}}</app-morebutton>
+                        </tr>
+                    </th>
+                  </table>
+
+
+                 
+
+
+
                   </div>
                 </div>
-              </div>
-               
-              
+              </div>              
             </div>
+
         <div class="middleCenter">
             <span  *ngIf="!gameService.round.status">Waiting result</span>
             <app-card *ngIf="gameService.round.status" [card]="gameService.round.result" ></app-card>
         </div>
         <div class="middleRight">
-            <table>
-                <tr>
-                    <button (click)="half()"> 1/2 </button>
-                    <button (click)="half()"> 1/2 </button>
-                </tr>
-            </table>
+                <table class="right">
+                    <tr>
+                        <button (click)="high()"> High </button>
+                        <button (click)="low()"> Low </button>
+                    </tr>
+                </table>
         </div>
     </div>
     <div class="bottom">
@@ -45,13 +74,8 @@
                 <button (click)="half()"> 1/2 </button>
                 <button (click)="min()"> min</button>
                 <button (click)="min()"> min</button>
-                <button (click)="min()"> min</button>
-                <button (click)="min()"> min</button>
-                <button (click)="min()"> min</button>
             </tr>
             <button (click)="half()"> 1/2 </button>
-        <button (click)="min()"> min</button>
-        <button (click)="min()"> min</button>
         <button (click)="min()"> min</button>
         <button (click)="min()"> min</button>
         <button (click)="min()"> min</button>

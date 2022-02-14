@@ -49,6 +49,8 @@
   .tab-content{
     display:none;
     flex-direction: column;
+    width: 100px;
+    height: 150px;
     }
     
     .active .tab-content{
@@ -76,3 +78,5 @@
      .active .tab-title{
      border-color: red;
      }
+ 
+     

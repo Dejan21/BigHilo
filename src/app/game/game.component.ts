@@ -11,7 +11,9 @@ export class GameComponent implements OnInit {
   morebutton:any;
   half:any
   min:any;
-
+  low:any;
+  high: any;
+  numbers:any;
 
   constructor( public gameService: GameService) { }
 
