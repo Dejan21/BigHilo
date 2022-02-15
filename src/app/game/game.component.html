@@ -13,13 +13,13 @@
                   <div class="tab-title">Main</div>
                   <div class="tab-content"  >Main Content
                       
-                    <button (click)="half()"> 1/2 </button>
-                    <button (click)="half()"> 1/2 </button>
-                    <button (click)="half()"> 1/2 </button>
-                    <button (click)="half()"> 1/2 </button>
-                    <button (click)="half()"> 1/2 </button>
-                    <button (click)="half()"> 1/2 </button>
-                    <button (click)="half()"> 1/2 </button>
+                    <button (click)="half()" class="blue"> 1/2 </button>
+                    <button (click)="half()" class="red1"> 1/2 </button>
+                    <button (click)="half()" class="black1"> 1/2 </button>
+                    <button (click)="half()" class="grey1"> 1/2 </button>
+                    <button (click)="half()" class="grey1"> 1/2 </button>
+                    <button (click)="half()" class="grey1"> 1/2 </button>
+                    <button (click)="half()" class="grey1"> 1/2 </button>
                 
                   </div>
                 </div>
@@ -27,8 +27,8 @@
                   <div class="tab-title">More</div>
                   <div class="tab-content">
                   <table>
-                    <th class="red">  
-                        <tr *ngFor="let button of gameService.numbers" >
+                    <th >  
+                        <tr *ngFor="let button of gameService.numbers" class="red" >
                             <app-morebutton (clickEvent)="onClickButton(button)">{{button.value}}</app-morebutton>
                         </tr>
                    </th>
@@ -70,16 +70,18 @@
     </div>
     <div class="bottom">
         <table class="bottom1">
-            <tr>
-                <button (click)="half()"> 1/2 </button>
-                <button (click)="min()"> min</button>
-                <button (click)="min()"> min</button>
+            <tr class="row">
+                <button (click)="half()" class="half"> 1/2 </button>
+                <button (click)="min()" class="long"> min</button>
+                <button (click)="min()" class="half"> min</button>
             </tr>
-            <button (click)="half()"> 1/2 </button>
-        <button (click)="min()"> min</button>
-        <button (click)="min()"> min</button>
-        <button (click)="min()"> min</button>
+        <button (click)="half()" class="min"> 1/2 </button>
+        <button (click)="min()" class="min"> min</button>
+        <button (click)="min()" class="min"> min</button>
+        <button (click)="min()" class="min"> min</button>
+        <button (click)="bet()" class="bet"> Bet</button>
         </table>
       
+        
     </div>
 </div>

@@ -50,16 +50,19 @@
     display:none;
     flex-direction: column;
     width: 100px;
-    height: 150px;
+    height: 50px;
     }
     
     .active .tab-content{
     display: flex;
+    height: 348px;
     }
 
     .tabset{
       display: flex;
       align-items: flex-start;
+      height: 380px;
+      
       }
       
       .tab{
@@ -77,6 +80,7 @@
      
      .active .tab-title{
      border-color: red;
+
      }
 
    .Low{
@@ -85,12 +89,69 @@
      width: 130px;
      background-color: red;
      color: white;
+     margin:  5px 18px;
    }
    .High{
-    margin:  5px;
+    margin:  5px 18px;
     height: 190px;
     width: 130px;
     background-color: blue;
     color: white;
   }
-     
+  .blue{
+    height: 30px;
+    margin: 2px;
+    background: blue;
+    width: 120px;
+    margin-left: 30px;
+  }
+  .red1{
+    height: 30px;
+    margin: 2px;
+    background: red;
+    width: 120px;
+    margin-left: 30px;
+  }
+  .black1{
+    height: 30px;
+    margin: 2px;
+    background: black;
+    color: white;
+    width: 120px;
+    margin-left: 30px;
+  }
+  
+  .grey1{
+    height: 30px;
+    margin: 2px;
+    background: lightcyan;
+    width: 120px;
+    margin-left: 30px;
+  }
+  .min{
+    height: 40px;
+    width: 60px;
+    margin: 3px;
+  }
+  .half{
+    height: 40px;
+    width: 60px;
+    margin: 3px;
+  }
+  .long{
+    height: 40px;
+    width: 130px;
+  }
+  .bet{
+    height: 90px;
+    width: 150px;
+    margin: 0px ;
+    background: green;
+    margin-left: 100px;
+  }
+  .row{
+    margin-left: 30px;
+  }
+  
+  
+  

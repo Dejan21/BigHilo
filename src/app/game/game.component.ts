@@ -14,6 +14,7 @@ export class GameComponent implements OnInit {
   low:any;
   high: any;
   numbers:any;
+  bet:any;
 
   constructor( public gameService: GameService) { }
 
