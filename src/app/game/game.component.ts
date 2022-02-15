@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { GameService } from '../game.service';
 
 @Component({
@@ -15,6 +15,9 @@ export class GameComponent implements OnInit {
   high: any;
   numbers:any;
   bet:any;
+
+
+  @Output() clickEvent = new EventEmitter<any>();
 
   constructor( public gameService: GameService) { }
 
@@ -35,4 +38,17 @@ export class GameComponent implements OnInit {
   onClickButton(number:any) {
     console.log(number)
   }
+  
+  onButtonBet(){
+    console.log('bet');
+   }
+
+   onHighButton(){
+      console.log('high')
+   }
+
+   onLowButton(){
+    console.log('low')
+ }
+ 
 }
