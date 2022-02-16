@@ -8,6 +8,7 @@ import { CardComponent } from './card/card.component';
 import { BetAreaComponent } from './bet-area/bet-area.component';
 import { ResultComponent } from './result/result.component';
 import { MorebuttonComponent } from './morebutton/morebutton.component';
+import { BetComponent } from './bet/bet.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MorebuttonComponent } from './morebutton/morebutton.component';
     CardComponent,
     BetAreaComponent,
     ResultComponent,
-    MorebuttonComponent
+    MorebuttonComponent,
+    BetComponent
   ],
   imports: [
     BrowserModule,

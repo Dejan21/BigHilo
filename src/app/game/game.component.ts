@@ -15,9 +15,11 @@ export class GameComponent implements OnInit {
   high: any;
   numbers:any;
   bet:any;
+  button:any;
+  
 
 
-  @Output() clickEvent = new EventEmitter<any>();
+ 
 
   constructor( public gameService: GameService) { }
 
@@ -40,7 +42,7 @@ export class GameComponent implements OnInit {
   }
   
   onButtonBet(){
-    console.log('bet');
+    console.log('Your Bet is accepted');
    }
 
    onHighButton(){

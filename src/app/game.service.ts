@@ -12,6 +12,7 @@ export class GameService {
   betTypes: any = [];
   number: any;
 numbers:any = []
+bets:any = []
 
 
 
@@ -31,15 +32,15 @@ numbers:any = []
   const numbers = ['2','3', '4', '5', '6', '7', '8', '9', '10', 'J', 'K', 'Q', 'A'];
     
   this.numbers = [
-    {value: '2',  multiplier: 2, },
-    {value: '3',  multiplier: 3, },
-    {value: '4',  multiplier: 4, },
-    {value: '5',  multiplier: 5, },
-    {value: '6',  multiplier: 6, },
-    {value: '7',  multiplier: 7, },
-    {value: '8',  multiplier: 8, },
-    {value: '9',  multiplier: 9, },
-    {value: '10',  multiplier: 10, },
+    {value: '2',  multiplier: 24, },
+    {value: '3',  multiplier: 24, },
+    {value: '4',  multiplier: 24, },
+    {value: '5',  multiplier: 24, },
+    {value: '6',  multiplier: 24, },
+    {value: '7',  multiplier: 24, },
+    {value: '8',  multiplier: 24, },
+    {value: '9',  multiplier: 24, },
+    {value: '10',  multiplier: 24, },
     {value: 'J',   },
     {value: 'K',   },
     {value: 'Q',   },
@@ -47,7 +48,16 @@ numbers:any = []
     ];
    
    
-
+    this.bets = [
+      {value: '1/2',  devided: 1/2, },
+      {value: '0.1',  multiplier: 0.1, },
+      {value: 'x2',  multiplier: 2, },
+      {value: 'min',  minus: 'min', },
+      {value: '0.3',  multiplier: 0.3, },
+      {value: '0.5',  multiplier: 0.5, },
+      {value: '0.7',  multiplier: 0.7, },
+   
+      ];
   
   const symbols = 
   [
