@@ -42,6 +42,7 @@ export class GameComponent implements OnInit {
   }
   
   onButtonBet(){
+    alert('your bet is accepted')
     console.log('Your Bet is accepted');
    }
 

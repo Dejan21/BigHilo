@@ -50,13 +50,14 @@ bets:any = []
    
     this.bets = [
       {value: '1/2',  devided: 1/2, },
-      {value: '0.1',  multiplier: 0.1, },
+      {value: '3',  multiplier: 3, },
       {value: 'x2',  multiplier: 2, },
-      {value: 'min',  minus: 'min', },
+      {value: 'min',  minus: '-', },
       {value: '0.3',  multiplier: 0.3, },
       {value: '0.5',  multiplier: 0.5, },
       {value: '0.7',  multiplier: 0.7, },
    
+     
       ];
   
   const symbols = 

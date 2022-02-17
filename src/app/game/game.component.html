@@ -14,7 +14,7 @@
                   <div class="tab-content"  >
                       
                     <button (click)="half()" value='24' multiplaier="24" class="blue"> JOKER x24</button>
-                    <button (click)="half()" class="red1"> RED x2</button>
+                    <button (click)="half()"  class="red1"> RED x2</button>
                     <button (click)="half()" class="black1"> BLACK x2 </button>
                     <button (click)="half()" class="grey1"> 2-9 x1.5</button>
                     <button (click)="half()" class="grey1"> J,Q,K,A x3 </button>
@@ -69,6 +69,14 @@
         </div>
     </div>
     <div class="bottom">
+        <table>
+              <tr>
+                <td *ngFor="let button of gameService.bets" class="bets" >
+                    <app-bet (clickEvent)="onClickButton(button)">{{button.value}}</app-bet>
+                </td>
+            </tr>
+                
+        </table>
         <!-- <table class="bottom1">
             <tr class="row">
                 <button (click)="half()" class="half"> 1/2 </button>
@@ -79,8 +87,9 @@
         <button (click)="min()" class="min"> 0.3</button>
         <button (click)="min()" class="min"> 0.5</button>
         <button (click)="min()" class="min"> 0.7</button>
-        <button (click)="onButtonBet()" class="bet"> Bet</button>
+    
         </table> -->
+        <button (click)="onButtonBet()" class="bet"> Bet</button>
       
        
         

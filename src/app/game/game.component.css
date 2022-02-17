@@ -147,11 +147,17 @@
     width: 150px;
     margin: 0px ;
     background: green;
-    margin-left: 100px;
+    margin-left: 400px;
   }
-  .row{
-    margin-left: 30px;
+  .bets{
+    height: 20px;
+    width: 20px;
   }
-  
-  
+  .red{
+   background-color: red;
+  }
+  .black{
+    background-color: black;
+  }
+
   
