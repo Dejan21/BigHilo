@@ -16,7 +16,8 @@ export class GameComponent implements OnInit {
   numbers:any;
   bet:any;
   button:any;
-  
+  selectedbet:any;
+  roundStatus:any;
 
 
  
@@ -24,6 +25,8 @@ export class GameComponent implements OnInit {
   constructor( public gameService: GameService) { }
 
   ngOnInit(): void {
+    this.gameService.roundStatus.subscribe(value => {this.roundStatus=value});
+
     this.gameLoop();
     setInterval(this.gameLoop.bind(this), 10000)
   }
@@ -42,8 +45,8 @@ export class GameComponent implements OnInit {
   }
   
   onButtonBet(){
-    alert('your bet is accepted')
-    console.log('Your Bet is accepted');
+    this.gameService.bet=this.selectedbet
+   
    }
 
    onHighButton(){
@@ -54,4 +57,11 @@ export class GameComponent implements OnInit {
     console.log('low')
  }
  
+ joker(){
+   
+ }
+ selectbet(bet:any){
+    this.selectedbet=bet;
+ }
+
 }

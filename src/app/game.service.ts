@@ -1,4 +1,5 @@
 import { Injectable, Output } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,10 @@ export class GameService {
   number: any;
 numbers:any = []
 bets:any = []
+bet:any;
+ lastResult:any;
+
+ public roundStatus = new BehaviorSubject<number>(0)
 
 
 
@@ -175,22 +180,17 @@ this.betTypes.push({
      const result = this.cards[Math.floor(Math.random() * this.cards.length)] // select random value from the aray
      
      this.results.push(result);
-    
+   
      
-     console.log(this.betTypes)
+     
      
 
-     this.round = {
-      id: this.round.id + 1,
-      result,
-      status: 0,
-      
-      
-    };
 
+    this.lastResult = result
 
+    this.roundStatus.next(0)
     setTimeout(() => {
-      this.round.status = 1;
+      this.roundStatus.next(1)
     }, 10000)
 
   

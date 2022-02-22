@@ -13,13 +13,13 @@
                   <div class="tab-title">Main</div>
                   <div class="tab-content"  >
                       
-                    <button (click)="half()" value='24' multiplaier="24" class="blue"> JOKER x24</button>
-                    <button (click)="half()"  class="red1"> RED x2</button>
-                    <button (click)="half()" class="black1"> BLACK x2 </button>
-                    <button (click)="half()" class="grey1"> 2-9 x1.5</button>
-                    <button (click)="half()" class="grey1"> J,Q,K,A x3 </button>
-                    <button (click)="half()" class="grey1"> J,Q x6 </button>
-                    <button (click)="half()" class="grey1"> K,A  x6</button>
+                    <button (click)="selectbet({value: 'JOKER'})" value='24' multiplaier="24" class="blue"> JOKER x24</button>
+                    <button (click)="selectbet({value: 'red'})"  class="red1"> RED x2</button>
+                    <button (click)="selectbet({value: 'black'})" class="black1"> BLACK x2 </button>
+                    <button (click)="selectbet({value: '2-9'})" class="grey1"> 2-9 x1.5</button>
+                    <button (click)="selectbet({value: 'J-Q'})" class="grey1"> J,Q x3 </button>
+                    <button (click)="selectbet({value: 'J-Q-K-A'})" class="grey1"> J,Q,K,A x6 </button>
+                    <button (click)="selectbet({value: 'k-A'})" class="grey1"> K,A  x6</button>
                 
                   </div>
                 </div>
@@ -29,18 +29,18 @@
                   <table>
                     <th >  
                         <tr *ngFor="let button of gameService.numbers" class="red" >
-                            <app-morebutton (clickEvent)="onClickButton(button)">{{button.value}}</app-morebutton>
+                            <app-morebutton (clickEvent)="selectbet(button)">{{button.value}}</app-morebutton>
                         </tr>
                    </th>
  
                    <th>
                         <tr *ngFor="let button of gameService.numbers" class="black">
-                            <app-morebutton (clickEvent)="onClickButton(button)">{{button.value}}</app-morebutton>
+                            <app-morebutton (clickEvent)="selectbet(button)">{{button.value}}</app-morebutton>
                         </tr>
                     </th>
                     <th>
                         <tr *ngFor="let button of gameService.numbers" class="grey">
-                            <app-morebutton (clickEvent)="onClickButton(button)">{{button.value}}</app-morebutton>
+                            <app-morebutton (clickEvent)="selectbet(button)">{{button.value}}</app-morebutton>
                         </tr>
                     </th>
                   </table>
@@ -56,8 +56,8 @@
             </div>
 
         <div class="middleCenter">
-            <span  *ngIf="!gameService.round.status">Waiting result</span>
-            <app-card *ngIf="gameService.round.status" [card]="gameService.round.result" ></app-card>
+            <span  *ngIf="roundStatus===1">Waiting result</span>
+            <app-card *ngIf="roundStatus===0" [card]="gameService.lastResult" ></app-card>
         </div>
         <div class="middleRight">
                 <table class="right">
@@ -77,19 +77,9 @@
             </tr>
                 
         </table>
-        <!-- <table class="bottom1">
-            <tr class="row">
-                <button (click)="half()" class="half"> 1/2 </button>
-                <button (click)="min()" class="long"> 0.5</button>
-                <button (click)="multiplyby2()" class="half"> x2</button>
-            </tr>
-        <button (click)="half()" class="min"> min </button>
-        <button (click)="min()" class="min"> 0.3</button>
-        <button (click)="min()" class="min"> 0.5</button>
-        <button (click)="min()" class="min"> 0.7</button>
-    
-        </table> -->
-        <button (click)="onButtonBet()" class="bet"> Bet</button>
+     
+        <button (click)="onButtonBet()" class="bet"> BET</button>
+        <h2>{{bet}}</h2>
       
        
         
